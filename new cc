@@ -1,0 +1,45 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    //make an array of size 1000 and initialize it to 0
+    // Reddit.com /r/programminghorrer
+
+/*
+    int numberArr[1000];
+    for (int i = 0; i < 1000; i++) {
+        cout << numArr[i] << endl;
+    }
+
+    vector<int> numberVect(1000);
+
+    for (int j = 0; j < 1000; j++) {
+        cout << numVect[j] << endl;
+    }
+*/
+    //----------------------------------------------------------------------
+/*
+    //fixed 
+    const size_t SIZE = 1000;
+    int numArr[SIZE] = {}; // initialize the array to all 0s
+    for (int i = 0; i < SIZE; i++) {
+        cout << numArr[i] << endl;
+    }
+
+    cout << endl;
+    cout << endl;
+    cout << endl;
+    cout << endl;
+    cout << endl;
+*/
+const size_t SIZE = 1000;
+    vector<int> vectNum(SIZE, 40); //Make a thousand 40's
+    int total = 0;
+    for (int i = 0; i < SIZE; i++) {
+        cout << vectNum[i] << endl;
+
+    }
+
+
+}
