@@ -1,0 +1,98 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+//C world code
+    bool fun(const char *arr, int SIZE) {
+        for (int i = 0; i < SIZE-1; i++)
+        if (arr[i] == arr[i+1]) return true;
+        return false;
+    }
+
+//YOU - write a function that will return true if there are two or more pairs of neighboring letters
+bool fun2(const char *arr, int SIZE) {
+    int pairCount = 0;
+    //size_t - proper way, used for indexing into something, getting the ith element of something Ex:(.at, [])
+    for (size_t i = 0; i < SIZE - 1; i++) {
+        if (arr[i] == arr[i + 1]) {
+            pairCount++;
+            i++;
+        }
+        return true;
+    }
+    return false;
+}
+
+//YOU - Write a function that will return true if the letters are in order
+// "ADGZ" -> true, because all the letters are in alphabetical order
+// "FOTA" -> false, because the A is after the T
+bool is_sorted (const char *arr, int SIZE) {
+    for (size_t i = 0; i < SIZE - 1; i++) {
+        if (arr[i] > arr[i + 1]) return false;
+    }
+    return true;
+}
+
+//Given a string s remove all letters that are not in order
+//"ABCED" -> "ABCE"
+//"GODAMIT" -> "GOT"
+//S is in IN/OUT parameter
+void stalin_sort(string &s) {
+    for (size_t i = 0; i < s.size() - 1; i++) {
+        //If two letters not in order, then erase the one out of order
+        if(s[i] > s[i + 1]) {
+        s.erase(i,1);
+        }
+    }
+    //Use this to erase characters: s.erase()
+    //s.erase(0,1); //This erases 1 letter at index 0 
+    //s.erase(x,y); erases y characters starting at index x
+    //return; //Optional
+}
+}
+}
+
+*/
+
+
+
+int main() {
+/*
+    string s;
+    cout << "enter a word" << endl;
+    cin >> s;
+    cout << boolalpha << fun(s.c_str(),s.size()) << endl;
+
+    string st;
+    cout << "enter two or more pairs of neighboring letters in a word" << endl;
+    cin >> st;
+    cout << boolalpha << fun2(st.c_str(),st.size()) << endl;
+*/
+
+/*
+    string s;
+    cout << "enter letters" << endl;
+    cin >> s;
+    cout << boolalpha << is_sorted(s.c_str(),s.size()) << endl;
+*/
+
+    string s;
+    cout << "enter words" << endl;
+    cin >> s;
+    cout << "before stalin sort: " << s << endl;
+    stalin_sort(s);
+    cout << "after stalin sort: " << s << endl;
+
+
+}
+
+/*
+// ABDA - ABD
+// AAAA - AAAA all are equal
+void stalin_sort(string &s) {
+    for (size_t i = 0; i < s.size() - 1; i++) {
+        if (s.at(i) > s.at(i + 1)) {
+        s.erase(i+1,1);
+        --i; // Even though this underflows and overflows back over, this is actually defined behavior
+        } 
