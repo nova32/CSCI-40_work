@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    // You: Vet the input. Don't allow the user to input an age too low or too high, or not a number.
+
+    // You: output if they are a child, a teen, an adult, middle aged or senior citizen
+
+    cout << "please enter your age: ";
+    int age = 0;
+    cin >> age;
+    if (!cin) {
+        cout << "return to input numeric value" << endl;
+    } else if (age <= 12) {
+        cout << "you're too young" << endl;
+    } else if (age >= 13 ||  age <= 19) {
+        cout << "you're a teen" << endl;
+    } else if () {
+
+    }
+    else if (age >= 70) {
+        cout << "you're a senior citizen" << endl;
+    } else {
+        cout << "you're an adult" << endl;
+    }
+
+
+}
