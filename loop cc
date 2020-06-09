@@ -1,0 +1,98 @@
+#include <iostream>
+#include <cmath>
+#include <unistd.h>
+#include <cstdlib>
+using namespace std;
+
+int main() {
+    // or for (int v = 0; v < 10; v = v + 1)
+    // for (int i = 0; i < 10; i++) - standard library 
+/*
+    while (true) {
+i = 0;  
+        if(i = 0; i < 100; i = i + 1) 
+        cout << i << endl;
+    }
+*/
+
+// if correct break out of loop
+// int target = rand()% 100 + 1;
+// (100 + 1) - gives a number from 1 to 100
+// seeding rand
+// srand(time(0));
+// abs(x) - absolute value
+
+    srand(time(0));
+    int target = 40; //solution 
+    int guess = 0; //value input
+    int closerNum = 0;
+    int distance = 0;
+
+
+
+    while (guess != target) {
+        cout << "Please guess a number: ";
+        cin >> guess;
+
+      if (guess == target) {
+        cout << "Correct" << endl;
+    } else if (guess > target) {
+        cout << "Too High" << endl;
+    } else if (guess < target) {
+        cout << "Too Low" << endl;
+    }
+
+    }
+
+     while (nextGuess == target) {
+
+
+
+     }
+
+
+
+
+
+/*
+int a = 0, b = 0;
+while (true) {
+    cin >> a; 
+if (a==0) return 0;
+    b += a;
+    cout << "B=" << b << endl;
+}
+*/
+
+
+
+/*
+    for (int i = 0; i < 100; i++) {
+        cout << i + 1 << endl;
+        usleep(1000000);    
+}
+*/
+
+
+
+/*  
+    for (int i = 0; i < 10; i++) {
+        cout << "hello";
+    }
+*/
+
+
+
+/*
+or...   
+   
+    int i = 0;
+    for (; i<5; ) {
+    cout << "hi" << endl;
+    i++
+    }
+
+
+*/
+
+}
